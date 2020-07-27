@@ -3,23 +3,13 @@ import {Col} from 'react-bootstrap';
 import InputGroup from 'react-bootstrap/InputGroup'
 import Form from 'react-bootstrap/Form'
 import Button from 'react-bootstrap/Button'
-// import FormCheck from 'react-bootstrap/FormCheck'
-// import FormCheck from 'react-bootstrap/FormCheck'
-
 
 export default function FormExample(props) {
-    // console.log(props)
     const [validated, setValidated] = useState(false);
 
     const handleSubmit = (event) => {
-        // const form = event.currentTarget;
-        // if (form.checkValidity() === false) {
             event.preventDefault();
-            console.log('handleSubmit')
-            // event.stopPropagation();
-        // }
         props.onCreated(event.target.elements)
-        // console.log(event.target.elements.firstName.value)
         setValidated(true);
     };
 

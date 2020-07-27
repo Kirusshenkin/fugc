@@ -1,8 +1,8 @@
-FROM node:8
+FROM node:10
 
-WORKDIR /app
+WORKDIR /public
 
-COPY package.json yarn.lock /app/
+COPY package.json yarn.lock /public/
 
 RUN yarn install
 

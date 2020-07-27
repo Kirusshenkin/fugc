@@ -13,8 +13,6 @@ export default props => {
     }
 
     const handleKeyPress = (event) => {
-        // console.log(event.key)
-
         if(event.key === 'Enter'){
             
             props.onSearch(event.target.value)

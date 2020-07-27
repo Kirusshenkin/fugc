@@ -16,7 +16,6 @@ import _ from 'lodash'
 class App extends Component {
 
   state = {
-    // Rows: false,
     isLoading: false,
     data: [],
     search: '',
@@ -39,7 +38,6 @@ class App extends Component {
 
   RowsHandler = count => {
     this.setState({
-      // Rows: true,
       isLoading: true
     })
 
@@ -67,7 +65,6 @@ class App extends Component {
 
   onCreated = form => {
     console.log({form})
-    // this.setState(state => {
       this.state.data.push({
         firstName: form.firstName.value,
         lastName: form.lastName.value,
@@ -76,9 +73,6 @@ class App extends Component {
         id: 5000
       });
       this.setState({})
-      // return state
-    // });
-    // this.setState({form})
   }
   
   getFilteredData() {
@@ -124,14 +118,6 @@ class App extends Component {
       <Container>
         <Row>
           <Col>
-          {/* {
-            (!this.state.data.length)
-              ?<RowsSelector
-              onChangeRows={this.RowsHandler}
-            />
-          : null
-          } */}
-
           {
             this.state.isLoading
             ? <Loader/>
