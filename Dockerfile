@@ -1,11 +1,16 @@
-FROM node:10
+FROM node:12.14.0-alpine
 
-WORKDIR /public
+WORKDIR /app
 
-COPY package.json yarn.lock /public/
+COPY package.json ./
+COPY package-lock.json ./
+RUN npm install --silent
+RUN npm install react-scripts@3.4.1 -g --silent
 
-RUN yarn install
+COPY . ./
+
+# RUN -c yarn build
 
 EXPOSE 3000
 
-CMD ["yarn", "start"]
+CMD ["npm", "start"]

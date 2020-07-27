@@ -13,7 +13,7 @@ export default function Example(props) {
     return (
       <>
         <Button variant="primary" onClick={handleShow}>
-          Launch demo modal
+          Добавить запись
         </Button>
   
         <Modal show={show} onHide={handleClose} animation={false}>
